@@ -1,0 +1,9 @@
+body {
+    width: 1280px;
+}
+
+#cards_container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
