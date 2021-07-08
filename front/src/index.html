@@ -7,21 +7,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hearthstone</title>
     <link rel="stylesheet" href="style.css">
-
+    <link rel="icon" href="images/icone.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&display=swap" rel="stylesheet">
 </head>
 
 <body>
+
     <section>
-        <select name="classes" id="class_select"></select>
-        <select name="types" id="type_select"></select>
-        <select name="factions" id="faction_select"></select>
-        <select name="races" id="race_select"></select>
+        <div class="menu">
+            <img class="rIcon" src="images/icone2.png" alt="right_icon">
+            <img class="lIcon" src="images/icone2.png" alt="left_icon">
+            <div class="filters">
+                <div>
+                </div>
+                <select name="classes" id="class_select" class="customDropdown"></select>
+            </div>
+            <div class="filters">
+                <div></div>
+                <select name="types" id="type_select" class="customDropdown"></select>
+            </div>
+            <div class="filters">
+                <div></div>
+                <select name="factions" id="faction_select" class="customDropdown"></select>
+            </div>
+            <div class="filters">
+                <div></div>
+                <select name="races" id="race_select" class="customDropdown"></select>
+            </div>
+            <div class="filters">
+                <div></div>
+                <select id="length" class="customDropdown">
+                    <option value='15' selected disabled hidden>Quantidade de cartas</option>
+                    <option value="15">15</option>
+                    <option value="30">30</option>
+                    <option value="60">60</option>
+                </select>
+            </div>
+        </div>
+        <img class="image" src="images/logo.png" width="400" alt="logo">
+
+
     </section>
     <section id="cards_container">
 
+
     </section>
-
-
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.js"></script>
     <script src="utils.js"></script>

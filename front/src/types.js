@@ -8,6 +8,9 @@ const types = {
 }
 
 const callApiType = (event) => {
+    faction_select.value = "0"
+    race_select.value = "0"
+    class_select.value = "0"
     const type_name = event.target.value //esse é o valor que vai ser passado na requisição
     const optionsType = {
         method: 'POST',
@@ -16,18 +19,18 @@ const callApiType = (event) => {
         // headers: { "Content-Type": "application/json" }
     };
     axios.request(optionsType).then(function (response) {
-        let cards = []
         const data = response.data.filter((card) => {
             if (card.img) {
                 return card
             }
         })
         if (data.length > 50) {
-            cards = data.slice(0, 50) // pega as 50 primeiras cartas
+            cardsData = data.slice(0, 50) // pega as 50 primeiras cartas
         } else {
-            cards = data
+            cardsData = data
         }
-        fillCardsContainer(cards)
+        fillCardsContainer(cardsData)
+
 
     }).catch(function (error) {
         console.error(error.massage)
@@ -36,8 +39,8 @@ const callApiType = (event) => {
 
 }
 const fillTypes = () => {
-    const type_select = document.querySelector("#type_select")
-    type_select.innerHTML += "<option value='' selected disabled hidden>Todos os tipos</option>"
+
+    type_select.innerHTML += "<option value='0' selected disabled hidden>Todos os tipos</option>"
     Object.entries(types).map((item) => {
         const type_value = item[0]
         const type_name = item[1]

@@ -1,9 +1,96 @@
 body {
-    width: 1280px;
+    background-image: url(images/brackground.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    margin: 0;
 }
 
 #cards_container {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+    z-index: 2;
+}
+
+.card {
+    z-index: 2;
+}
+
+.menu {
+    background: url("https://d2q63o9r0h0ohi.cloudfront.net/images/card-gallery/bg_filter_middle_tile-907853600f2b8dc11ae3acca94ff309f58b4959f380a6995e1b69b2d94f4bae5811b3ec588d56290599d59ddf6d00f0ce3fa9087c08ee8f7eabe843ed3646f9d.jpg");
+    padding: 10px 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 80px;
+}
+
+.menu::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    height: 55px;
+    width: 100%;
+    background: url(images/border.png) center top repeat-x;
+}
+
+.menu::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    height: 55px;
+    width: 100%;
+    background: url(images/border2.png) center top repeat-x;
+}
+
+.rIcon {
+    position: absolute;
+    width: 150px;
+    z-index: 4;
+    left: 0;
+    padding-left: 25px;
+}
+
+.lIcon {
+    position: absolute;
+    width: 150px;
+    z-index: 4;
+    right: 0;
+    padding-left: 25px;
+}
+
+.image {
+    position: absolute;
+    left: 35%;
+}
+
+.filters {
+    border: 2px solid #fcd144;
+    background: #c3b189;
+    padding: 5px 10px;
+    z-index: 4;
+    margin-right: 10px;
+    border-radius: 0 20px;
+}
+
+.customDropdown {
+    border: none;
+    margin-left: 5px;
+    padding: 1px;
+    background: transparent;
+    outline: 0px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.icons_classes {
+    background-image: url("https://d2q63o9r0h0ohi.cloudfront.net/images/icons/class/icon_class_all-6964ad24bb858e15c61243fc19943c1ba8cc7d348f9bf36232587f1f5e089277e24e303a1c198e02e8adb751a86d44890ab62a1a189b9cbea3b4f17d7da3eba7.png")
+}
+
+option {
+    background: #c3b189;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+    color: rgb(65, 33, 31);
 }
